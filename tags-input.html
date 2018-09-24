@@ -192,6 +192,10 @@ CSS custom property | Description | Default
       focus() {
         this.$.input.$.input.focus();
       }
+      
+      clear() {
+			  this.$.input.value = "";
+		  }
 
       _removeTag(e) {
         // console.log('onremove', e, tag);
