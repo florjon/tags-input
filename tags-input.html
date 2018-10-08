@@ -154,7 +154,7 @@ CSS custom property | Description | Default
           this._fire('tag-added', tag);
           return true;
         } else {
-          if (this.tag == tag) this.$.input.invalid = true;
+			if (this.tag == tag) this.$.inputEmail.invalid = true;
           this._fire('tag-denied', tag);
           return false;
         }
@@ -180,7 +180,7 @@ CSS custom property | Description | Default
           this._fire('tag-inserted', tag);
           return true;
         } else {
-          if (this.tag == tag) this.$.input.invalid = true;
+			if (this.tag == tag) this.$.inputEmail.invalid = true;
           this._fire('tag-denied', tag);
           return false;
         }
@@ -190,11 +190,11 @@ CSS custom property | Description | Default
        * Give focus to the underlying input.
        */
       focus() {
-        this.$.input.$.input.focus();
+		  this.$.inputEmail.$.input.focus();
       }
       
       clear() {
-			  this.$.input.value = "";
+		  this.$.inputEmail.value = "";
 		  }
 
       _removeTag(e) {
@@ -212,7 +212,7 @@ CSS custom property | Description | Default
 
       _onInputKeydown (e) {
         // console.log('keydown:', e.key, e.keyCode, this._separatorKeyCode);
-        this.$.input.invalid = false;
+		  this.$.inputEmail.invalid = false;
         if ((this.separator && this.separator === e.key)
           || (!this.separator
             && (e.keyCode == 9   || e.key == 'Tab'          // tab
